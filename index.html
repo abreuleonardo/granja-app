@@ -21,6 +21,7 @@
   --green:#5B7553;--green-deep:#3F5439;--green-soft:#DCE6D6;
   --red:#B23A2E;--red-soft:#F2DAD6;
   --purple:#7C5CBF;--purple-soft:#EAE6F5;
+  --orange:#C4621D;--orange-soft:#FAEADE;
   --line:#E6DBC2;
   --shadow:0 1px 2px rgba(43,33,24,.04),0 4px 14px rgba(43,33,24,.07);
 }
@@ -93,6 +94,24 @@ main{flex:1;padding:2px 18px 108px;}
 .sc-red .sn{color:var(--red);}
 .sc-gold .sn{color:var(--gold-deep);}
 .sc-purple .sn{color:var(--purple);}
+.sc-orange .sn{color:var(--orange);}
+
+/* PRODUTIVIDADE */
+.prod-card{background:var(--surface);border-radius:16px;padding:14px 15px 13px;box-shadow:var(--shadow);margin-top:10px;margin-bottom:12px;}
+.prod-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px;}
+.prod-header h4{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);font-weight:700;margin:0;}
+.prod-pct-wrap{display:flex;align-items:baseline;gap:4px;}
+.prod-pct{font-family:'Fraunces',serif;font-weight:800;font-size:26px;line-height:1;}
+.prod-pct.green{color:var(--green-deep);}
+.prod-pct.gold{color:var(--gold-deep);}
+.prod-pct.red{color:var(--red);}
+.prod-pct-label{font-size:11px;color:var(--ink-soft);font-weight:600;}
+.prod-bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:8px;}
+.prod-fill{height:100%;border-radius:4px;transition:width .5s ease;}
+.prod-fill.green{background:var(--green-deep);}
+.prod-fill.gold{background:var(--gold);}
+.prod-fill.red{background:var(--red);}
+.prod-meta{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-soft);}
 
 /* CHART */
 .chart-card{background:var(--surface);border-radius:16px;padding:14px 13px 10px;box-shadow:var(--shadow);margin-top:12px;}
@@ -117,6 +136,7 @@ main{flex:1;padding:2px 18px 108px;}
 .btn-gold{background:var(--gold);color:#3A2900;}
 .btn-green{background:var(--green-deep);color:#fff;}
 .btn-purple{background:var(--purple);color:#fff;}
+.btn-orange{background:var(--orange);color:#fff;}
 .fab-row{display:flex;gap:8px;margin-top:4px;}
 .fab-row .btn{font-size:12.5px;padding:11px 6px;}
 
@@ -150,15 +170,32 @@ main{flex:1;padding:2px 18px 108px;}
 .note{font-size:11.5px;color:var(--ink-faint);line-height:1.5;margin-top:16px;padding:0 2px;}
 .card-title{font-size:13px;font-weight:600;margin:0 0 12px;}
 
+/* INATIVAS */
+.inativa-cat{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);}
+.inativa-cat:last-child{border-bottom:none;}
+.inativa-info{display:flex;align-items:center;gap:10px;}
+.inativa-emoji{font-size:20px;line-height:1;}
+.inativa-nome{font-size:13px;font-weight:700;line-height:1.2;}
+.inativa-desc{font-size:11px;color:var(--ink-faint);margin-top:1px;}
+.mini-stepper{display:flex;align-items:center;gap:10px;}
+.mini-stepper button{width:32px;height:32px;border-radius:9px;border:1.5px solid var(--line);background:var(--bg);font-size:16px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.mini-stepper button:active{background:var(--surface-2);}
+.mini-stepper .mv{font-family:'Fraunces',serif;font-weight:700;font-size:20px;min-width:28px;text-align:center;color:var(--ink);}
+.inativas-summary{background:var(--surface);border-radius:14px;padding:13px 15px;box-shadow:var(--shadow);margin-bottom:14px;}
+.inativas-summary-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);}
+.inativas-summary-row:last-child{border-bottom:none;}
+.isr-label{font-size:12.5px;font-weight:600;color:var(--ink-soft);}
+.isr-val{font-family:'Fraunces',serif;font-weight:700;font-size:17px;}
+
 /* TOAST */
 .toast{position:fixed;left:50%;bottom:94px;transform:translateX(-50%) translateY(10px);background:var(--ink);color:var(--bg);padding:9px 17px;border-radius:28px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:all .22s ease;z-index:50;max-width:90%;text-align:center;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
-/* BOTTOM NAV — 6 items */
-nav.bottomnav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:480px;background:var(--surface);border-top:1px solid var(--line);display:flex;padding:5px 2px calc(5px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(43,33,24,.05);}
-nav.bottomnav button{flex:1;border:none;background:none;display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 1px;color:var(--ink-faint);cursor:pointer;}
-nav.bottomnav button svg{width:18px;height:18px;}
-nav.bottomnav button span{font-size:9px;font-weight:600;}
+/* BOTTOM NAV — 7 items */
+nav.bottomnav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:480px;background:var(--surface);border-top:1px solid var(--line);display:flex;padding:5px 0 calc(5px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(43,33,24,.05);}
+nav.bottomnav button{flex:1;border:none;background:none;display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px 0;color:var(--ink-faint);cursor:pointer;}
+nav.bottomnav button svg{width:17px;height:17px;}
+nav.bottomnav button span{font-size:8px;font-weight:600;}
 nav.bottomnav button.active{color:var(--green-deep);}
 ::selection{background:var(--gold-soft);}
 </style>
@@ -213,6 +250,22 @@ nav.bottomnav button.active{color:var(--green-deep);}
     </div>
   </div>
 
+  <!-- PRODUTIVIDADE -->
+  <div class="prod-card" id="prodCard" style="display:none;">
+    <div class="prod-header">
+      <h4>📊 Produtividade</h4>
+      <div class="prod-pct-wrap">
+        <div class="prod-pct" id="prodPct">—</div>
+        <div class="prod-pct-label">%</div>
+      </div>
+    </div>
+    <div class="prod-bar"><div class="prod-fill" id="prodFill" style="width:0%"></div></div>
+    <div class="prod-meta">
+      <span id="prodMetaEsq">—</span>
+      <span id="prodMetaDir">—</span>
+    </div>
+  </div>
+
   <div class="segmented">
     <button class="active" data-period="mes">Este mês</button>
     <button data-period="geral">Total geral</button>
@@ -220,9 +273,11 @@ nav.bottomnav button.active{color:var(--green-deep);}
 
   <div class="stat-grid">
     <div class="stat-card"><div class="sn" id="sOvos">0</div><div class="sl">ovos coletados</div></div>
-    <div class="stat-card"><div class="sn" id="sMedia">0</div><div class="sl">média por galinha/dia</div></div>
+    <div class="stat-card sc-green"><div class="sn" id="sMedia">0</div><div class="sl">ovos/galinha ativa/dia</div></div>
     <div class="stat-card" style="background:var(--gold-soft)"><div class="sn" style="color:var(--gold-deep)" id="sManha">0</div><div class="sl">🌅 manhã</div></div>
     <div class="stat-card" style="background:var(--purple-soft)"><div class="sn" style="color:var(--purple)" id="sTarde">0</div><div class="sl">🌇 tarde</div></div>
+    <div class="stat-card sc-green"><div class="sn" id="sAtivas">—</div><div class="sl">galinhas ativas</div></div>
+    <div class="stat-card sc-orange"><div class="sn" id="sInativas">0</div><div class="sl">inativas (chocas etc.)</div></div>
     <div class="stat-card sc-green"><div class="sn" id="sReceita">R$ 0</div><div class="sl">receita estimada</div></div>
     <div class="stat-card sc-green"><div class="sn" id="sVendas">R$ 0</div><div class="sl">vendas registradas</div></div>
     <div class="stat-card"><div class="sn" id="sEstoque">0</div><div class="sl">estoque (bandejas)</div></div>
@@ -330,12 +385,108 @@ nav.bottomnav button.active{color:var(--green-deep);}
   <div id="outrosList"></div>
 </section>
 
+<!-- INATIVAS -->
+<section class="tab-panel" id="tab-inativas">
+
+  <div class="section-label" style="margin-top:6px">Fora de postura agora</div>
+
+  <div class="card">
+    <div class="inativa-cat">
+      <div class="inativa-info">
+        <span class="inativa-emoji">🐣</span>
+        <div>
+          <div class="inativa-nome">Choca</div>
+          <div class="inativa-desc">Em choco / incubando ovos</div>
+        </div>
+      </div>
+      <div class="mini-stepper">
+        <button data-cat="choca" data-op="-">−</button>
+        <div class="mv" id="iv-choca">0</div>
+        <button data-cat="choca" data-op="+">+</button>
+      </div>
+    </div>
+    <div class="inativa-cat">
+      <div class="inativa-info">
+        <span class="inativa-emoji">🪶</span>
+        <div>
+          <div class="inativa-nome">Muda</div>
+          <div class="inativa-desc">Trocando penas</div>
+        </div>
+      </div>
+      <div class="mini-stepper">
+        <button data-cat="muda" data-op="-">−</button>
+        <div class="mv" id="iv-muda">0</div>
+        <button data-cat="muda" data-op="+">+</button>
+      </div>
+    </div>
+    <div class="inativa-cat">
+      <div class="inativa-info">
+        <span class="inativa-emoji">🤒</span>
+        <div>
+          <div class="inativa-nome">Doente</div>
+          <div class="inativa-desc">Em recuperação / tratamento</div>
+        </div>
+      </div>
+      <div class="mini-stepper">
+        <button data-cat="doente" data-op="-">−</button>
+        <div class="mv" id="iv-doente">0</div>
+        <button data-cat="doente" data-op="+">+</button>
+      </div>
+    </div>
+    <div class="inativa-cat">
+      <div class="inativa-info">
+        <span class="inativa-emoji">💤</span>
+        <div>
+          <div class="inativa-nome">Descanso</div>
+          <div class="inativa-desc">Período de desova / estresse</div>
+        </div>
+      </div>
+      <div class="mini-stepper">
+        <button data-cat="descanso" data-op="-">−</button>
+        <div class="mv" id="iv-descanso">0</div>
+        <button data-cat="descanso" data-op="+">+</button>
+      </div>
+    </div>
+    <div class="inativa-cat">
+      <div class="inativa-info">
+        <span class="inativa-emoji">🔖</span>
+        <div>
+          <div class="inativa-nome">Outra razão</div>
+          <div class="inativa-desc">Fraca, velha, separada…</div>
+        </div>
+      </div>
+      <div class="mini-stepper">
+        <button data-cat="outras" data-op="-">−</button>
+        <div class="mv" id="iv-outras">0</div>
+        <button data-cat="outras" data-op="+">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="inativas-summary">
+    <div class="inativas-summary-row">
+      <span class="isr-label">🐔 Total do plantel</span>
+      <span class="isr-val" id="iv-plantel">0</span>
+    </div>
+    <div class="inativas-summary-row">
+      <span class="isr-label" style="color:var(--orange)">⏸ Total inativas</span>
+      <span class="isr-val" id="iv-total" style="color:var(--orange)">0</span>
+    </div>
+    <div class="inativas-summary-row">
+      <span class="isr-label" style="color:var(--green-deep)">✅ Ativas (poedeiras)</span>
+      <span class="isr-val" id="iv-ativas" style="color:var(--green-deep)">0</span>
+    </div>
+  </div>
+
+  <p class="note">As galinhas inativas são descontadas do cálculo de produtividade no Painel. Ajuste sempre que o status de uma galinha mudar.</p>
+</section>
+
 <!-- AJUSTES -->
 <section class="tab-panel" id="tab-ajustes">
 
   <div class="card">
     <div class="field">
-      <label>Galinhas poedeiras</label>
+      <label>Galinhas poedeiras (total do plantel)</label>
       <div class="stepper">
         <button id="galMinus">−</button>
         <div class="val" id="galVal">0</div>
@@ -404,7 +555,6 @@ nav.bottomnav button.active{color:var(--green-deep);}
   </div>
 
   <p class="note">Para usar como app: abra no Chrome Android → menu ⋮ → "Adicionar à tela inicial".</p>
-  <p class="note">Os dados ficam salvos no navegador por padrão. Se quiser sincronizar via Firebase, configure o objeto FIREBASE_CONFIG no script.</p>
 </section>
 
 </main>
@@ -429,6 +579,10 @@ nav.bottomnav button.active{color:var(--green-deep);}
   <button class="navbtn" data-tab="outros">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7" stroke-width="3"/></svg>
     <span>Outros</span>
+  </button>
+  <button class="navbtn" data-tab="inativas">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
+    <span>Inativas</span>
   </button>
   <button class="navbtn" data-tab="ajustes">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a7.97 7.97 0 000-2l2-1.5-2-3.4-2.3.9a8 8 0 00-1.7-1L15 3h-4l-.4 2.5a8 8 0 00-1.7 1l-2.3-.9-2 3.4 1.9 1.5a8 8 0 000 2l-1.9 1.5 2 3.4 2.3-.9c.5.4 1.1.75 1.7 1L11 21h4l.4-2.5c.6-.25 1.2-.6 1.7-1l2.3.9 2-3.4-1.9-1.5z"/></svg>
@@ -460,16 +614,28 @@ function toast(msg){
 }
 
 /* ---- state ---- */
-var cfg={numGalinhas:0,precoBandeja:24,ovosPorBandeja:30,precoRacaoRef:109,
-         metaOvos:0,metaReceita:0,alerteMin:0,reminderTime:''};
+var cfg={
+  numGalinhas:0,precoBandeja:24,ovosPorBandeja:30,precoRacaoRef:109,
+  metaOvos:0,metaReceita:0,alerteMin:0,reminderTime:'',
+  inativas:{choca:0,muda:0,doente:0,descanso:0,outras:0}
+};
 var ovosE=[],racaoE=[],outrosE=[],vendasE=[],mortE=[];
 var period='mes',chartMode='14d',myChart=null,reminderFired={};
+
+function totalInativas(){
+  var iv=cfg.inativas||{};
+  return (Number(iv.choca)||0)+(Number(iv.muda)||0)+(Number(iv.doente)||0)+(Number(iv.descanso)||0)+(Number(iv.outras)||0);
+}
+function galinhasAtivas(){
+  return Math.max(0, cfg.numGalinhas - totalInativas());
+}
+
+/* ---- storage ---- */
 var firebaseDb=null;
 var storageMode='local';
 var storageReady=false;
 window.FIREBASE_CONFIG = window.FIREBASE_CONFIG || null;
 
-/* ---- storage ---- */
 async function initStorageAdapter(){
   if(storageReady) return;
   try{
@@ -523,7 +689,10 @@ async function loadAll(){
       var r=await window.storage.get('gl-'+k,false);
       if(!r||!r.value) continue;
       var v=JSON.parse(r.value);
-      if(k==='cfg') cfg=Object.assign(cfg,v);
+      if(k==='cfg'){
+        cfg=Object.assign(cfg,v);
+        if(!cfg.inativas) cfg.inativas={choca:0,muda:0,doente:0,descanso:0,outras:0};
+      }
       else if(k==='ovos') ovosE=v;
       else if(k==='racao') racaoE=v;
       else if(k==='outros') outrosE=v;
@@ -582,6 +751,7 @@ function goTab(name){
   if(name==='racao') renderRacaoList();
   if(name==='vendas') renderVendasList();
   if(name==='outros') renderOutrosList();
+  if(name==='inativas') renderInativas();
   if(name==='ajustes') renderAjustes();
 }
 window.goTab=goTab;
@@ -592,12 +762,17 @@ function renderPainel(){
   document.getElementById('todayLabel').textContent=
     new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
 
+  var ativas=galinhasAtivas();
+  var inativas=totalInativas();
+
   // stamp
   var hj=ovosE.find(function(e){return e.data===todayStr();});
   var hjOvos=hj?totalOvo(hj):0;
   document.getElementById('stampNum').textContent=fmtN(hjOvos);
   document.getElementById('stampPer').textContent=hj?('🌅 '+(Number(hj.manha)||0)+' · 🌇 '+(Number(hj.tarde)||0)):'sem registro hoje';
-  document.getElementById('stampGal').textContent=cfg.numGalinhas+(cfg.numGalinhas===1?' galinha':' galinhas');
+  var galLabel=cfg.numGalinhas+(cfg.numGalinhas===1?' galinha':' galinhas');
+  if(inativas>0) galLabel+=' ('+ativas+' ativas)';
+  document.getElementById('stampGal').textContent=galLabel;
 
   // alerta
   var ab=document.getElementById('alertBox');
@@ -642,8 +817,29 @@ function renderPainel(){
     var fr=document.getElementById('metaRecFill');fr.style.width=pr+'%';fr.className='meta-fill'+(pr>=100?' over':'');
   }else{document.getElementById('metaRecRow').style.display='none';}
 
-  // stats
+  // produtividade
   var ovP=forPeriod(ovosE,period);
+  var dias=ovP.length||1;
+  var tOvosProd=ovP.reduce(function(s,e){return s+totalOvo(e);},0);
+  var prodCard=document.getElementById('prodCard');
+  if(ativas>0&&tOvosProd>0){
+    prodCard.style.display='block';
+    // ovos por galinha ativa por dia vs máximo teórico de 1 ovo/galinha/dia
+    var mediaAtiva=tOvosProd/(dias*ativas);
+    var pct=Math.min(100,Math.round(mediaAtiva*100));
+    var cls=pct>=75?'green':pct>=50?'gold':'red';
+    document.getElementById('prodPct').textContent=fmtN(pct);
+    document.getElementById('prodPct').className='prod-pct '+cls;
+    document.getElementById('prodFill').style.width=pct+'%';
+    document.getElementById('prodFill').className='prod-fill '+cls;
+    var periodoLabel=period==='mes'?'este mês':'no total';
+    document.getElementById('prodMetaEsq').textContent=fmtN(mediaAtiva,2)+' ovo/galinha ativa/dia';
+    document.getElementById('prodMetaDir').textContent=fmtN(tOvosProd)+' ovos · '+ativas+' ativas · '+dias+' dias';
+  }else{
+    prodCard.style.display='none';
+  }
+
+  // stats
   var raP=forPeriod(racaoE,period);
   var ouP=forPeriod(outrosE,period);
   var veP=forPeriod(vendasE,period);
@@ -654,8 +850,8 @@ function renderPainel(){
   var tRacao=raP.reduce(function(s,e){return s+(Number(e.valor)||0);},0);
   var tOutros=ouP.reduce(function(s,e){return s+(Number(e.valor)||0);},0);
   var tVendas=veP.reduce(function(s,e){return s+(Number(e.valor)||0);},0);
-  var dias=ovP.length||1;
-  var media=cfg.numGalinhas>0?(tOvos/dias)/cfg.numGalinhas:0;
+  // média usa galinhas ativas
+  var media=ativas>0?(tOvos/dias)/ativas:0;
   var ovosBandeja=cfg.ovosPorBandeja||30;
   var precoB=cfg.precoBandeja||0;
   var receita=(tOvos/ovosBandeja)*precoB;
@@ -677,6 +873,8 @@ function renderPainel(){
   document.getElementById('sManha').textContent=fmtN(tManha);
   document.getElementById('sTarde').textContent=fmtN(tTarde);
   document.getElementById('sMedia').textContent=fmtN(media,2);
+  document.getElementById('sAtivas').textContent=cfg.numGalinhas>0?fmtN(ativas):'—';
+  document.getElementById('sInativas').textContent=fmtN(inativas);
   document.getElementById('sReceita').textContent=fmtBRL(receita);
   document.getElementById('sVendas').textContent=fmtBRL(tVendas);
   document.getElementById('sEstoque').textContent=fmtN(est.bandejas,1);
@@ -961,6 +1159,49 @@ function renderOutrosList(){
   });
 }
 
+/* ======= INATIVAS TAB ======= */
+var CATS=[
+  {id:'choca',  emoji:'🐣', nome:'Choca'},
+  {id:'muda',   emoji:'🪶', nome:'Muda'},
+  {id:'doente', emoji:'🤒', nome:'Doente'},
+  {id:'descanso',emoji:'💤',nome:'Descanso'},
+  {id:'outras', emoji:'🔖', nome:'Outra razão'}
+];
+
+function renderInativas(){
+  if(!cfg.inativas) cfg.inativas={choca:0,muda:0,doente:0,descanso:0,outras:0};
+  CATS.forEach(function(c){
+    var el=document.getElementById('iv-'+c.id);
+    if(el) el.textContent=Number(cfg.inativas[c.id])||0;
+  });
+  var tot=totalInativas();
+  var ativas=galinhasAtivas();
+  document.getElementById('iv-total').textContent=tot;
+  document.getElementById('iv-plantel').textContent=cfg.numGalinhas;
+  document.getElementById('iv-ativas').textContent=ativas;
+}
+
+// bind stepper buttons in inativas tab
+document.querySelectorAll('#tab-inativas .mini-stepper button').forEach(function(btn){
+  btn.addEventListener('click',async function(){
+    var cat=btn.dataset.cat;
+    var op=btn.dataset.op;
+    if(!cfg.inativas) cfg.inativas={choca:0,muda:0,doente:0,descanso:0,outras:0};
+    var cur=Number(cfg.inativas[cat])||0;
+    if(op==='+'){
+      // não deixa ultrapassar o plantel
+      if(totalInativas()>=cfg.numGalinhas){toast('Não pode exceder o plantel');return;}
+      cfg.inativas[cat]=cur+1;
+    }else{
+      cfg.inativas[cat]=Math.max(0,cur-1);
+    }
+    await saveCfg();
+    renderInativas();
+    var nomes={choca:'🐣 Choca',muda:'🪶 Muda',doente:'🤒 Doente',descanso:'💤 Descanso',outras:'🔖 Outra'};
+    toast((nomes[cat]||cat)+': '+cfg.inativas[cat]);
+  });
+});
+
 /* ======= AJUSTES ======= */
 function renderAjustes(){
   document.getElementById('galVal').textContent=cfg.numGalinhas;
@@ -1067,7 +1308,20 @@ function startReminder(){
 
 /* exportar CSV */
 document.getElementById('btnExportar').addEventListener('click',function(){
-  var L=['\uFEFFGalinheiro — Exportação','Data: '+new Date().toLocaleDateString('pt-BR'),''];
+  var L=['﻿Galinheiro — Exportação','Data: '+new Date().toLocaleDateString('pt-BR'),''];
+  // inativas
+  var iv=cfg.inativas||{};
+  var tot=totalInativas();
+  L.push('=== PLANTEL ===');
+  L.push('Total galinhas;'+cfg.numGalinhas);
+  L.push('Inativas total;'+tot);
+  L.push('Chocas;'+(Number(iv.choca)||0));
+  L.push('Muda;'+(Number(iv.muda)||0));
+  L.push('Doentes;'+(Number(iv.doente)||0));
+  L.push('Descanso;'+(Number(iv.descanso)||0));
+  L.push('Outras;'+(Number(iv.outras)||0));
+  L.push('Ativas;'+galinhasAtivas());
+  L.push('');
   L.push('=== COLETA DE OVOS ===','Data;Manhã;Tarde;Total;Observação');
   [].concat(ovosE).sort(function(a,b){return a.data.localeCompare(b.data);}).forEach(function(e){
     L.push([fmtBR(e.data),Number(e.manha)||0,Number(e.tarde)||0,totalOvo(e),e.obs||''].join(';'));
@@ -1107,11 +1361,9 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
   var mesAtual=now.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
   var ym=now.getFullYear()+'-'+pad(now.getMonth()+1);
 
-  // helpers locais
   function fBRL(v){return'R$ '+(v||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});}
   function fN(v,c){return(v||0).toLocaleString('pt-BR',{minimumFractionDigits:c||0,maximumFractionDigits:c||0});}
 
-  // dados do mês
   var ovM=ovosE.filter(function(e){return e.data&&e.data.slice(0,7)===ym;});
   var raM=racaoE.filter(function(e){return e.data&&e.data.slice(0,7)===ym;});
   var veM=vendasE.filter(function(e){return e.data&&e.data.slice(0,7)===ym;});
@@ -1128,18 +1380,20 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
   var receita=(tOvos/ovosBandeja)*precoB;
   var tCusto=tRacao+tOutros;
   var lucro=receita-tCusto;
-  var media=cfg.numGalinhas>0&&ovM.length>0?(tOvos/ovM.length)/cfg.numGalinhas:0;
+  var ativas=galinhasAtivas();
+  var dias=ovM.length||1;
+  var media=ativas>0&&ovM.length>0?(tOvos/dias)/ativas:0;
+  var prodPct=ativas>0&&tOvos>0?Math.min(100,Math.round((tOvos/(dias*ativas))*100)):0;
   var custoOvo=tOvos>0?tCusto/tOvos:0;
 
   var y=margin;
 
-  // cabeçalho
-  doc.setFillColor(63,84,57); // verde-deep
+  doc.setFillColor(63,84,57);
   doc.rect(0,0,W,22,'F');
   doc.setFont('helvetica','bold');
   doc.setFontSize(16);
   doc.setTextColor(255,255,255);
-  doc.text('🐔 Galinheiro',margin,14);
+  doc.text('Galinheiro',margin,14);
   doc.setFontSize(9);
   doc.setFont('helvetica','normal');
   doc.text('Relatório mensal — '+mesAtual,margin,19.5);
@@ -1147,8 +1401,7 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
 
   y=30;
 
-  // faixa resumo
-  doc.setFillColor(244,223,160); // gold-soft
+  doc.setFillColor(244,223,160);
   doc.roundedRect(margin,y,W-margin*2,28,3,3,'F');
   doc.setTextColor(43,33,24);
 
@@ -1166,20 +1419,18 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
 
   y+=34;
 
-  // métricas secundárias
   doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(107,91,73);
-  var mline='Galinhas: '+cfg.numGalinhas+
-    '   |   Manhã: '+fN(tManha)+' ovos   |   Tarde: '+fN(tTarde)+' ovos'+
-    '   |   Média/galinha/dia: '+fN(media,2)+
+  var mline='Plantel: '+cfg.numGalinhas+' ('+ativas+' ativas, '+totalInativas()+' inativas)'+
+    '   |   Manha: '+fN(tManha)+' ovos   |   Tarde: '+fN(tTarde)+' ovos'+
+    '   |   Media/ativa/dia: '+fN(media,2)+
+    '   |   Produtividade: '+prodPct+'%'+
     '   |   Custo/ovo: '+(tOvos>0?fBRL(custoOvo):'—');
-  doc.text(mline,margin,y);
-  y+=7;
+  doc.text(mline,margin,y,{maxWidth:W-margin*2});
+  y+=10;
 
-  // linha divisória
   doc.setDrawColor(230,219,194);doc.setLineWidth(0.3);
   doc.line(margin,y,W-margin,y);y+=5;
 
-  // tabela ovos
   if(ovM.length>0){
     doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(43,33,24);
     doc.text('COLETA DE OVOS',margin,y);y+=3;
@@ -1200,7 +1451,6 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
     y=doc.lastAutoTable.finalY+6;
   }
 
-  // tabela ração
   if(raM.length>0){
     if(y>pageH-60){doc.addPage();y=margin;}
     doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(43,33,24);
@@ -1222,7 +1472,6 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
     y=doc.lastAutoTable.finalY+6;
   }
 
-  // tabela vendas
   if(veM.length>0){
     if(y>pageH-60){doc.addPage();y=margin;}
     doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(43,33,24);
@@ -1244,7 +1493,6 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
     y=doc.lastAutoTable.finalY+6;
   }
 
-  // tabela outros custos
   if(ouM.length>0){
     if(y>pageH-60){doc.addPage();y=margin;}
     doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(43,33,24);
@@ -1266,7 +1514,6 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
     y=doc.lastAutoTable.finalY+6;
   }
 
-  // rodapé
   var totalPages=doc.internal.getNumberOfPages();
   for(var p=1;p<=totalPages;p++){
     doc.setPage(p);
