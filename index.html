@@ -195,8 +195,73 @@ main{flex:1;padding:2px 18px 108px;}
 nav.bottomnav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:480px;background:var(--surface);border-top:1px solid var(--line);display:flex;padding:5px 0 calc(5px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(43,33,24,.05);}
 nav.bottomnav button{flex:1;border:none;background:none;display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px 0;color:var(--ink-faint);cursor:pointer;}
 nav.bottomnav button svg{width:17px;height:17px;}
-nav.bottomnav button span{font-size:8px;font-weight:600;}
+nav.bottomnav button span{font-size:6.5px;font-weight:600;}
 nav.bottomnav button.active{color:var(--green-deep);}
+/* MARCA RAÇÃO */
+.marca-card{background:var(--surface);border-radius:16px;padding:14px 15px 12px;box-shadow:var(--shadow);margin-top:10px;margin-bottom:12px;}
+.marca-card h4{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);font-weight:700;margin:0 0 10px;}
+.marca-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);}
+.marca-row:last-child{border-bottom:none;}
+.marca-name{font-size:13px;font-weight:600;}
+.marca-stats{font-size:12px;color:var(--ink-soft);}
+.marca-bar-wrap{flex:1;margin:0 10px;height:5px;background:var(--line);border-radius:3px;overflow:hidden;}
+.marca-bar-fill{height:100%;border-radius:3px;background:var(--green-deep);}
+
+/* ATÍPICOS CARD */
+.atip-card{background:var(--orange-soft);border:1.5px solid var(--orange);border-radius:14px;padding:11px 14px;margin-bottom:12px;}
+.atip-card-title{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--orange);font-weight:700;margin:0 0 6px;}
+.atip-item{display:flex;justify-content:space-between;font-size:12.5px;font-weight:600;padding:3px 0;}
+.atip-item span{color:var(--ink-soft);font-weight:400;}
+/* CICLO 100 SEMANAS */
+.ciclo-card{background:var(--surface);border-radius:16px;padding:14px 15px 12px;box-shadow:var(--shadow);margin-bottom:12px;}
+.ciclo-card h4{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);font-weight:700;margin:0 0 10px;}
+.ciclo-track{position:relative;height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin-bottom:6px;}
+.ciclo-fill-pico{position:absolute;left:0;top:0;height:100%;background:linear-gradient(90deg,var(--green-deep),var(--gold));border-radius:6px;transition:width .5s;}
+.ciclo-fill-dec{position:absolute;top:0;height:100%;background:var(--orange);border-radius:0 6px 6px 0;transition:width .5s;}
+.ciclo-markers{display:flex;justify-content:space-between;font-size:9px;color:var(--ink-faint);margin-bottom:8px;}
+.ciclo-info{display:flex;gap:8px;flex-wrap:wrap;}
+.ciclo-badge{background:var(--surface-2);border-radius:9px;padding:5px 10px;font-size:11px;font-weight:600;}
+.ciclo-badge.alerta{background:var(--orange-soft);color:var(--orange);}
+.ciclo-badge.critico{background:var(--red-soft);color:var(--red);}
+.ciclo-badge.ok{background:var(--green-soft);color:var(--green-deep);}
+
+/* COMPARATIVO MARCAS */
+.comp-card{background:var(--surface);border-radius:16px;padding:14px 15px;box-shadow:var(--shadow);margin-bottom:14px;}
+.comp-card h4{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);font-weight:700;margin:0 0 12px;}
+.comp-mes-row{border-bottom:1px solid var(--line);padding:8px 0;}
+.comp-mes-row:last-child{border-bottom:none;}
+.comp-mes-label{font-size:12px;font-weight:700;color:var(--ink-soft);margin-bottom:6px;}
+.comp-marca-line{display:flex;align-items:center;gap:6px;margin-bottom:4px;}
+.comp-marca-name{font-size:11px;font-weight:600;min-width:70px;}
+.comp-bar-mini{flex:1;height:5px;background:var(--line);border-radius:3px;overflow:hidden;}
+.comp-bar-mini-fill{height:100%;border-radius:3px;}
+.comp-nums{font-size:11px;color:var(--ink-soft);text-align:right;min-width:80px;}
+
+/* MILHO */
+.milho-tag{display:inline-block;background:#FFF3DC;color:#7A5000;border-radius:6px;font-size:10px;font-weight:700;padding:2px 7px;margin-left:4px;}
+
+/* PINTAINHAS */
+.pint-lote{background:var(--surface);border-radius:14px;padding:13px 14px;box-shadow:var(--shadow);margin-bottom:12px;}
+.pint-lote-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.pint-lote-nome{font-size:13px;font-weight:700;}
+.pint-lote-semana{font-size:11px;color:var(--ink-soft);}
+.pint-fase{display:inline-block;border-radius:6px;font-size:10px;font-weight:700;padding:2px 8px;margin-bottom:6px;}
+.pint-fase.incubacao{background:var(--purple-soft);color:var(--purple);}
+.pint-fase.pintinho{background:#FFF3DC;color:#7A5000;}
+.pint-fase.frango{background:var(--green-soft);color:var(--green-deep);}
+.pint-fase.postura{background:var(--gold-soft);color:var(--gold-deep);}
+.pint-bar-wrap{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-bottom:6px;}
+.pint-bar-fill{height:100%;border-radius:3px;background:var(--purple);transition:width .4s;}
+.pint-eventos{margin-top:6px;}
+.pint-evento{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink-soft);padding:3px 0;}
+.pint-evento-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.pint-evento-dot.verm{background:var(--red);}
+.pint-evento-dot.vit{background:var(--purple);}
+.pint-evento-dot.rac{background:var(--green-deep);}
+.pint-summary-card{background:var(--surface-2);border-radius:12px;padding:10px 13px;margin-bottom:12px;display:flex;gap:12px;flex-wrap:wrap;}
+.pint-sum-item{font-size:12px;font-weight:600;color:var(--ink-soft);}
+.pint-sum-item span{color:var(--ink);font-weight:700;}
+
 ::selection{background:var(--gold-soft);}
 </style>
 </head>
@@ -231,6 +296,33 @@ nav.bottomnav button.active{color:var(--green-deep);}
     </div>
   </div>
 
+  <!-- CICLO 100 SEMANAS -->
+  <div class="ciclo-card" id="cicloCard" style="display:none;">
+    <h4>🔄 Ciclo do plantel</h4>
+    <div class="ciclo-track">
+      <div class="ciclo-fill-pico" id="cicloFillPico" style="width:0%"></div>
+      <div class="ciclo-fill-dec" id="cicloFillDec" style="left:0%;width:0%"></div>
+    </div>
+    <div class="ciclo-markers"><span>0</span><span>20sem</span><span>50sem</span><span>75sem</span><span>100sem</span></div>
+    <div class="ciclo-info" id="cicloInfo"></div>
+  </div>
+
+  <!-- PRODUTIVIDADE -->
+  <div class="prod-card" id="prodCard" style="display:none;">
+    <div class="prod-header">
+      <h4>📊 Produtividade</h4>
+      <div class="prod-pct-wrap">
+        <div class="prod-pct" id="prodPct">—</div>
+        <div class="prod-pct-label">%</div>
+      </div>
+    </div>
+    <div class="prod-bar"><div class="prod-fill" id="prodFill" style="width:0%"></div></div>
+    <div class="prod-meta">
+      <span id="prodMetaEsq">—</span>
+      <span id="prodMetaDir">—</span>
+    </div>
+  </div>
+
   <div class="alert-banner" id="alertBox" style="display:none;"></div>
 
   <div class="forecast-card ok" id="fcCard" style="display:none;">
@@ -247,22 +339,6 @@ nav.bottomnav button.active{color:var(--green-deep);}
     <div id="metaRecRow" class="meta-row" style="display:none;">
       <div class="meta-label"><span>💰 Receita</span><span id="metaRecLbl">—</span></div>
       <div class="meta-bar"><div class="meta-fill" id="metaRecFill" style="width:0%"></div></div>
-    </div>
-  </div>
-
-  <!-- PRODUTIVIDADE -->
-  <div class="prod-card" id="prodCard" style="display:none;">
-    <div class="prod-header">
-      <h4>📊 Produtividade</h4>
-      <div class="prod-pct-wrap">
-        <div class="prod-pct" id="prodPct">—</div>
-        <div class="prod-pct-label">%</div>
-      </div>
-    </div>
-    <div class="prod-bar"><div class="prod-fill" id="prodFill" style="width:0%"></div></div>
-    <div class="prod-meta">
-      <span id="prodMetaEsq">—</span>
-      <span id="prodMetaDir">—</span>
     </div>
   </div>
 
@@ -288,6 +364,18 @@ nav.bottomnav button.active{color:var(--green-deep);}
     <div class="stat-card"><div class="sn" id="sCustoOvo">—</div><div class="sl">custo por ovo</div></div>
   </div>
 
+  <!-- ATÍPICOS PAINEL -->
+  <div class="atip-card" id="atipPainelCard" style="display:none;">
+    <div class="atip-card-title">🥚 Ovos atípicos registrados</div>
+    <div id="atipPainelList"></div>
+  </div>
+
+  <!-- MARCAS RAÇÃO PAINEL -->
+  <div class="marca-card" id="marcaCard" style="display:none;">
+    <h4>🌾 Ração por marca — período</h4>
+    <div id="marcaList"></div>
+  </div>
+
   <div class="chart-card">
     <div class="chart-header">
       <h3 id="chartTitle">Produção — 14 dias</h3>
@@ -304,6 +392,7 @@ nav.bottomnav button.active{color:var(--green-deep);}
     <button class="btn btn-gold" onclick="goTab('ovos')">+ Ovos</button>
     <button class="btn btn-green" onclick="goTab('racao')">+ Ração</button>
     <button class="btn btn-purple" onclick="goTab('vendas')">+ Venda</button>
+    <button class="btn btn-orange" onclick="goTab('atipicos')">🥚 Atípico</button>
   </div>
 </section>
 
@@ -333,17 +422,52 @@ nav.bottomnav button.active{color:var(--green-deep);}
       <div class="field"><label for="racaoData">Data</label><input type="date" id="racaoData"></div>
       <div class="field"><label for="racaoKg">Kg</label><input type="number" id="racaoKg" min="0" step="0.5" placeholder="0"></div>
     </div>
+    <div class="field">
+      <label for="racaoMarca">Marca da ração</label>
+      <select id="racaoMarca">
+        <option value="">— Selecione —</option>
+        <option value="Dourado">Dourado</option>
+        <option value="Loja da BR">Loja da BR</option>
+        <option value="Outra">Outra…</option>
+      </select>
+    </div>
+    <div class="field" id="racaoMarcaOutraWrap" style="display:none"><label for="racaoMarcaOutra">Qual marca?</label><input type="text" id="racaoMarcaOutra" placeholder="Nome da marca"></div>
     <div class="field"><label for="racaoValor">Valor pago (R$)</label><input type="number" id="racaoValor" min="0" step="0.01" placeholder="0,00"></div>
     <div class="field"><label for="racaoDur">Dias que durou (opcional)</label><input type="number" id="racaoDur" min="0" step="1" placeholder="ex: 12"></div>
     <div class="hint" id="racaoHint">&nbsp;</div>
     <button class="btn btn-green" id="btnSalvarRacao">Salvar compra</button>
   </div>
+
+  <!-- MILHO -->
+  <div class="card">
+    <p class="card-title">🌽 Milho (complemento)</p>
+    <div class="row2">
+      <div class="field"><label for="milhoData">Data</label><input type="date" id="milhoData"></div>
+      <div class="field"><label for="milhoKg">Kg</label><input type="number" id="milhoKg" min="0" step="0.5" placeholder="0"></div>
+    </div>
+    <div class="field"><label for="milhoValor">Valor pago (R$)</label><input type="number" id="milhoValor" min="0" step="0.01" placeholder="0,00"></div>
+    <div class="field"><label for="milhoObs">Observação (opcional)</label><input type="text" id="milhoObs" placeholder="ex: milho triturado, grão inteiro…"></div>
+    <button class="btn" style="background:#7A5000;color:#fff" id="btnSalvarMilho">Salvar milho</button>
+  </div>
+
+  <!-- COMPARATIVO POR MÊS -->
+  <div class="comp-card" id="compMarcaCard">
+    <h4>📊 Comparativo por marca / mês</h4>
+    <div id="compMarcaList"><div class="empty">Registre compras de ração com marca para ver o comparativo.</div></div>
+  </div>
+
   <div class="list-total">
-    <span class="section-label" style="margin:0">Histórico</span>
+    <span class="section-label" style="margin:0">Histórico ração</span>
     <span class="v" id="racaoTotal">R$ 0 no mês</span>
   </div>
   <div class="hint" id="racaoDurMedia" style="margin-top:-8px">&nbsp;</div>
   <div id="racaoList"></div>
+
+  <div class="list-total" style="margin-top:12px">
+    <span class="section-label" style="margin:0">Histórico milho</span>
+    <span class="v" id="milhoTotal">R$ 0 no mês</span>
+  </div>
+  <div id="milhoList"></div>
 </section>
 
 <!-- VENDAS -->
@@ -368,6 +492,26 @@ nav.bottomnav button.active{color:var(--green-deep);}
   <div id="vendasList"></div>
 </section>
 
+<!-- ATÍPICOS -->
+<section class="tab-panel" id="tab-atipicos">
+  <div class="card">
+    <p class="card-title">🥚 Ovo atípico (peso elevado)</p>
+    <div class="row2">
+      <div class="field"><label for="atipData">Data</label><input type="date" id="atipData"></div>
+      <div class="field"><label for="atipPeso">Peso (g)</label><input type="number" id="atipPeso" min="1" step="1" placeholder="ex: 104"></div>
+    </div>
+    <div class="field"><label for="atipQtd">Quantidade</label><input type="number" id="atipQtd" min="1" step="1" placeholder="1" value="1"></div>
+    <div class="field"><label for="atipObs">Observação (opcional)</label><input type="text" id="atipObs" placeholder="ex: dois claros, dupla gema, casca mole…"></div>
+    <div class="hint" id="atipHint">&nbsp;</div>
+    <button class="btn btn-orange" id="btnSalvarAtip">Registrar ovo atípico</button>
+  </div>
+  <div class="list-total">
+    <span class="section-label" style="margin:0">Histórico</span>
+    <span class="v" id="atipTotal">0 no mês</span>
+  </div>
+  <div id="atipList"></div>
+</section>
+
 <!-- OUTROS -->
 <section class="tab-panel" id="tab-outros">
   <div class="card">
@@ -383,6 +527,62 @@ nav.bottomnav button.active{color:var(--green-deep);}
     <span class="v" id="outrosTotal">R$ 0 no mês</span>
   </div>
   <div id="outrosList"></div>
+</section>
+
+<!-- PINTAINHAS -->
+<section class="tab-panel" id="tab-pintainhas">
+
+  <div class="pint-summary-card" id="pintSummary" style="display:none;">
+    <div class="pint-sum-item">Lotes: <span id="pintTotalLotes">0</span></div>
+    <div class="pint-sum-item">Pintainhas: <span id="pintTotalAves">0</span></div>
+    <div class="pint-sum-item">Em postura: <span id="pintTotalPostura">0</span></div>
+  </div>
+
+  <!-- Novo lote -->
+  <div class="card">
+    <p class="card-title">🐣 Novo lote de incubação</p>
+    <div class="row2">
+      <div class="field"><label for="pintNome">Nome do lote</label><input type="text" id="pintNome" placeholder="ex: Lote Junho/26"></div>
+      <div class="field"><label for="pintQtd">Ovos incubados</label><input type="number" id="pintQtd" min="1" step="1" placeholder="0"></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label for="pintDataInc">Data de incubação</label><input type="date" id="pintDataInc"></div>
+      <div class="field"><label for="pintRaca">Raça / cruzamento</label><input type="text" id="pintRaca" placeholder="ex: ISA Brown"></div>
+    </div>
+    <button class="btn btn-purple" id="btnSalvarLote">Criar lote</button>
+  </div>
+
+  <!-- Registro de evento -->
+  <div class="card">
+    <p class="card-title">💉 Registrar evento (vermifugação / vitamina / ração)</p>
+    <div class="row2">
+      <div class="field">
+        <label for="pintEvtLote">Lote</label>
+        <select id="pintEvtLote"><option value="">— Selecione —</option></select>
+      </div>
+      <div class="field">
+        <label for="pintEvtTipo">Tipo</label>
+        <select id="pintEvtTipo">
+          <option value="vermifugo">💊 Vermifugação</option>
+          <option value="vitamina">🧪 Vitamina / suplemento</option>
+          <option value="racao">🌾 Troca de ração (fase)</option>
+          <option value="morte">💀 Baixa (morte)</option>
+          <option value="nascimento">🐣 Nascimento confirmado</option>
+          <option value="outro">📝 Outro</option>
+        </select>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field"><label for="pintEvtData">Data</label><input type="date" id="pintEvtData"></div>
+      <div class="field"><label for="pintEvtQtd">Qtd afetada</label><input type="number" id="pintEvtQtd" min="0" step="1" placeholder="todas"></div>
+    </div>
+    <div class="field"><label for="pintEvtObs">Produto / observação</label><input type="text" id="pintEvtObs" placeholder="ex: Ivermectina 0,5ml, Polivitamínico…"></div>
+    <button class="btn btn-purple" id="btnSalvarEvt">Registrar evento</button>
+  </div>
+
+  <div class="section-label">Lotes ativos</div>
+  <div id="pintLotesList"><div class="empty">Nenhum lote cadastrado ainda.</div></div>
+
 </section>
 
 <!-- INATIVAS -->
@@ -512,6 +712,8 @@ nav.bottomnav button.active{color:var(--green-deep);}
       <div class="field"><label for="cfgOvBandeja">Ovos por bandeja</label><input type="number" id="cfgOvBandeja" min="1" step="1"></div>
     </div>
     <div class="field"><label for="cfgRacaoRef">Referência do saco de ração (R$)</label><input type="number" id="cfgRacaoRef" min="0" step="0.01"></div>
+    <div class="field"><label for="cfgDataNasc">Data de nascimento / chegada do plantel atual</label><input type="date" id="cfgDataNasc"><p class="hint" style="margin-top:4px;margin-bottom:0">Usado para calcular o ciclo de 100 semanas no Painel.</p></div>
+    <button class="btn btn-green" id="btnCfgGeral" style="margin-top:8px">Salvar configurações</button>
   </div>
 
   <div class="card">
@@ -580,6 +782,14 @@ nav.bottomnav button.active{color:var(--green-deep);}
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7" stroke-width="3"/></svg>
     <span>Outros</span>
   </button>
+  <button class="navbtn" data-tab="atipicos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="13" rx="7" ry="9"/><text x="12" y="16" text-anchor="middle" font-size="9" fill="currentColor" stroke="none" font-weight="bold">!</text></svg>
+    <span>Atípicos</span>
+  </button>
+  <button class="navbtn" data-tab="pintainhas">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="14" rx="6" ry="7"/><path d="M9 6c0-1.5 1-3 3-3s3 1.5 3 3" stroke-linecap="round"/><circle cx="10" cy="13" r="1" fill="currentColor" stroke="none"/><circle cx="14" cy="13" r="1" fill="currentColor" stroke="none"/></svg>
+    <span>Pintainhas</span>
+  </button>
   <button class="navbtn" data-tab="inativas">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
     <span>Inativas</span>
@@ -619,7 +829,7 @@ var cfg={
   metaOvos:0,metaReceita:0,alerteMin:0,reminderTime:'',
   inativas:{choca:0,muda:0,doente:0,descanso:0,outras:0}
 };
-var ovosE=[],racaoE=[],outrosE=[],vendasE=[],mortE=[];
+var ovosE=[],racaoE=[],outrosE=[],vendasE=[],mortE=[],atipicosE=[],milhoE=[],lotesE=[];
 var period='mes',chartMode='14d',myChart=null,reminderFired={};
 
 function totalInativas(){
@@ -682,13 +892,33 @@ window.storage={
   }
 };
 
+var useWindowStorage = typeof window.storage !== 'undefined';
+
+async function storageGet(key){
+  if(useWindowStorage){
+    try{
+      var r=await window.storage.get(key,false);
+      return (r&&r.value)?r.value:null;
+    }catch(e){return null;}
+  }else{
+    return localStorage.getItem(key);
+  }
+}
+async function storageSet(key,val){
+  if(useWindowStorage){
+    try{await window.storage.set(key,val,false);}catch(e){toast('Não foi possível salvar');}
+  }else{
+    try{localStorage.setItem(key,val);}catch(e){toast('Não foi possível salvar');}
+  }
+}
+
 async function loadAll(){
-  var keys=['cfg','ovos','racao','outros','vendas','mort'];
+  var keys=['cfg','ovos','racao','outros','vendas','mort','atipicos','milho','lotes'];
   for(var k of keys){
     try{
-      var r=await window.storage.get('gl-'+k,false);
-      if(!r||!r.value) continue;
-      var v=JSON.parse(r.value);
+      var val=await storageGet('gl-'+k);
+      if(!val) continue;
+      var v=JSON.parse(val);
       if(k==='cfg'){
         cfg=Object.assign(cfg,v);
         if(!cfg.inativas) cfg.inativas={choca:0,muda:0,doente:0,descanso:0,outras:0};
@@ -698,12 +928,14 @@ async function loadAll(){
       else if(k==='outros') outrosE=v;
       else if(k==='vendas') vendasE=v;
       else if(k==='mort') mortE=v;
+      else if(k==='atipicos') atipicosE=v;
+      else if(k==='milho') milhoE=v;
+      else if(k==='lotes') lotesE=v;
     }catch(e){}
   }
 }
 async function sv(key,data){
-  try{await window.storage.set('gl-'+key,JSON.stringify(data),false);}
-  catch(e){toast('Não foi possível salvar');}
+  await storageSet('gl-'+key,JSON.stringify(data));
 }
 var saveCfg=function(){return sv('cfg',cfg);};
 var saveOvos=function(){return sv('ovos',ovosE);};
@@ -711,6 +943,9 @@ var saveRacao=function(){return sv('racao',racaoE);};
 var saveOutros=function(){return sv('outros',outrosE);};
 var saveVendas=function(){return sv('vendas',vendasE);};
 var saveMort=function(){return sv('mort',mortE);};
+var saveAtipicos=function(){return sv('atipicos',atipicosE);};
+var saveMilho=function(){return sv('milho',milhoE);};
+var saveLotes=function(){return sv('lotes',lotesE);};
 
 /* ---- period filter ---- */
 function forPeriod(arr,p){
@@ -749,8 +984,10 @@ function goTab(name){
   if(name==='painel') renderPainel();
   if(name==='ovos') renderOvosList();
   if(name==='racao') renderRacaoList();
+  if(name==='pintainhas') renderPintainhas();
   if(name==='vendas') renderVendasList();
   if(name==='outros') renderOutrosList();
+  if(name==='atipicos') renderAtipList();
   if(name==='inativas') renderInativas();
   if(name==='ajustes') renderAjustes();
 }
@@ -773,6 +1010,56 @@ function renderPainel(){
   var galLabel=cfg.numGalinhas+(cfg.numGalinhas===1?' galinha':' galinhas');
   if(inativas>0) galLabel+=' ('+ativas+' ativas)';
   document.getElementById('stampGal').textContent=galLabel;
+
+  // CICLO 100 SEMANAS
+  var cicloCard=document.getElementById('cicloCard');
+  if(cfg.dataNascPlantel){
+    cicloCard.style.display='block';
+    var nascDate=new Date(cfg.dataNascPlantel+'T12:00:00');
+    var hoje=new Date();
+    var semanas=Math.floor((hoje-nascDate)/(7*86400000));
+    var SEM_TOTAL=100;
+    var SEM_PICO_FIM=50;   // pico de produção até ~50 semanas
+    var SEM_DEC_INICIO=75; // declínio a partir de ~75 semanas
+    var pctAtual=Math.min(100,Math.round(semanas/SEM_TOTAL*100));
+    var pctPico=Math.round(SEM_PICO_FIM/SEM_TOTAL*100); // 50%
+    var pctDecInicio=Math.round(SEM_DEC_INICIO/SEM_TOTAL*100); // 75%
+    // barra de pico (verde→dourado) vai até onde o plantel está ou até 50sem
+    var fillPico=Math.min(pctAtual,pctPico);
+    // barra de declínio (laranja) começa em 75% e vai até onde o plantel está
+    var fillDecLeft=pctDecInicio;
+    var fillDecWidth=semanas>SEM_DEC_INICIO?Math.min(pctAtual-pctDecInicio,100-pctDecInicio):0;
+    document.getElementById('cicloFillPico').style.width=fillPico+'%';
+    document.getElementById('cicloFillDec').style.left=fillDecLeft+'%';
+    document.getElementById('cicloFillDec').style.width=fillDecWidth+'%';
+    var badges=[];
+    var semRestantes=SEM_TOTAL-semanas;
+    if(semanas<0){
+      badges.push({cls:'ok',txt:'Plantel ainda não nasceu'});
+    }else if(semanas<20){
+      badges.push({cls:'ok',txt:'🐣 Crescimento: sem.'+semanas});
+      badges.push({cls:'ok',txt:'Postura inicia ~sem.20'});
+    }else if(semanas<SEM_PICO_FIM){
+      badges.push({cls:'ok',txt:'✅ Pico de produção'});
+      badges.push({cls:'ok',txt:'Semana '+semanas+' de '+SEM_TOTAL});
+    }else if(semanas<SEM_DEC_INICIO){
+      badges.push({cls:'ok',txt:'Manutenção — sem.'+semanas});
+      badges.push({cls:'alerta',txt:'Declínio em ~'+(SEM_DEC_INICIO-semanas)+' sem.'});
+    }else if(semanas<SEM_TOTAL){
+      badges.push({cls:'alerta',txt:'⚠️ Fase de declínio'});
+      badges.push({cls:'alerta',txt:'Substituir em ~'+semRestantes+' sem.'});
+      badges.push({cls:'alerta',txt:'Semana '+semanas+'/'+SEM_TOTAL});
+    }else{
+      badges.push({cls:'critico',txt:'🔴 Ciclo encerrado!'});
+      badges.push({cls:'critico',txt:'Substituir plantel agora'});
+    }
+    var ci=document.getElementById('cicloInfo');ci.innerHTML='';
+    badges.forEach(function(b){
+      var s=document.createElement('span');s.className='ciclo-badge '+b.cls;s.textContent=b.txt;ci.appendChild(s);
+    });
+  }else{
+    cicloCard.style.display='none';
+  }
 
   // alerta
   var ab=document.getElementById('alertBox');
@@ -822,19 +1109,26 @@ function renderPainel(){
   var dias=ovP.length||1;
   var tOvosProd=ovP.reduce(function(s,e){return s+totalOvo(e);},0);
   var prodCard=document.getElementById('prodCard');
-  if(ativas>0&&tOvosProd>0){
+  if(cfg.numGalinhas>0){
     prodCard.style.display='block';
-    // ovos por galinha ativa por dia vs máximo teórico de 1 ovo/galinha/dia
-    var mediaAtiva=tOvosProd/(dias*ativas);
-    var pct=Math.min(100,Math.round(mediaAtiva*100));
-    var cls=pct>=75?'green':pct>=50?'gold':'red';
-    document.getElementById('prodPct').textContent=fmtN(pct);
-    document.getElementById('prodPct').className='prod-pct '+cls;
-    document.getElementById('prodFill').style.width=pct+'%';
-    document.getElementById('prodFill').className='prod-fill '+cls;
-    var periodoLabel=period==='mes'?'este mês':'no total';
-    document.getElementById('prodMetaEsq').textContent=fmtN(mediaAtiva,2)+' ovo/galinha ativa/dia';
-    document.getElementById('prodMetaDir').textContent=fmtN(tOvosProd)+' ovos · '+ativas+' ativas · '+dias+' dias';
+    if(ativas>0&&tOvosProd>0){
+      var mediaAtiva=tOvosProd/(dias*ativas);
+      var pct=Math.min(100,Math.round(mediaAtiva*100));
+      var cls=pct>=75?'green':pct>=50?'gold':'red';
+      document.getElementById('prodPct').textContent=fmtN(pct);
+      document.getElementById('prodPct').className='prod-pct '+cls;
+      document.getElementById('prodFill').style.width=pct+'%';
+      document.getElementById('prodFill').className='prod-fill '+cls;
+      document.getElementById('prodMetaEsq').textContent=fmtN(mediaAtiva,2)+' ovo/galinha ativa/dia';
+      document.getElementById('prodMetaDir').textContent=fmtN(tOvosProd)+' ovos · '+ativas+' ativas · '+dias+' dias';
+    }else{
+      document.getElementById('prodPct').textContent='—';
+      document.getElementById('prodPct').className='prod-pct';
+      document.getElementById('prodFill').style.width='0%';
+      document.getElementById('prodFill').className='prod-fill';
+      document.getElementById('prodMetaEsq').textContent=ativas+' galinha'+(ativas!==1?'s ativas':' ativa');
+      document.getElementById('prodMetaDir').textContent='sem ovos registrados no período';
+    }
   }else{
     prodCard.style.display='none';
   }
@@ -885,6 +1179,171 @@ function renderPainel(){
   document.getElementById('sCustoGal').textContent=cfg.numGalinhas>0?fmtBRL(custoGal):'—';
 
   renderChart(chartMode);
+
+  // MARCAS RAÇÃO
+  var raAll=forPeriod(racaoE,period);
+  var marcaMap={};
+  raAll.forEach(function(e){
+    var m=e.marca||'Sem marca';
+    if(!marcaMap[m]) marcaMap[m]={kg:0,valor:0,compras:0,meses:{}};
+    marcaMap[m].kg+=(Number(e.kg)||0);
+    marcaMap[m].valor+=(Number(e.valor)||0);
+    marcaMap[m].compras++;
+    // registra cada mês em que essa marca foi usada
+    var ym=e.data?e.data.slice(0,7):null;
+    if(ym) marcaMap[m].meses[ym]=1;
+  });
+
+  // para cada marca, conta ovos nos meses em que ela foi comprada
+  // se só há uma marca no período, atribui toda a produção do período
+  var marcaKeys=Object.keys(marcaMap);
+  var todosOsMeses={};
+  marcaKeys.forEach(function(m){Object.keys(marcaMap[m].meses).forEach(function(ym){todosOsMeses[ym]=1;});});
+  var mesComVariasMarcas={};
+  marcaKeys.forEach(function(m){
+    Object.keys(marcaMap[m].meses).forEach(function(ym){
+      mesComVariasMarcas[ym]=(mesComVariasMarcas[ym]||0)+1;
+    });
+  });
+
+  // ovos por mês e dias registrados por mês (do período)
+  var ovosPorMes={};
+  var diasPorMes={};
+  forPeriod(ovosE,period).forEach(function(e){
+    var ym=e.data?e.data.slice(0,7):null;
+    if(ym){
+      ovosPorMes[ym]=(ovosPorMes[ym]||0)+totalOvo(e);
+      diasPorMes[ym]=(diasPorMes[ym]||0)+1;
+    }
+  });
+
+  // atribui ovos e dias a cada marca
+  marcaKeys.forEach(function(m){
+    marcaMap[m].ovos=0;
+    marcaMap[m].diasProd=0;
+    Object.keys(marcaMap[m].meses).forEach(function(ym){
+      var ovosNoMes=ovosPorMes[ym]||0;
+      var diasNoMes=diasPorMes[ym]||0;
+      if(mesComVariasMarcas[ym]===1){
+        marcaMap[m].ovos+=ovosNoMes;
+        marcaMap[m].diasProd+=diasNoMes;
+      }else{
+        var valorMesTotal=raAll.filter(function(e){return e.data&&e.data.slice(0,7)===ym;})
+          .reduce(function(s,e){return s+(Number(e.valor)||0);},0)||1;
+        var valorMarcaMes=raAll.filter(function(e){return e.data&&e.data.slice(0,7)===ym&&(e.marca||'Sem marca')===m;})
+          .reduce(function(s,e){return s+(Number(e.valor)||0);},0);
+        var prop=valorMarcaMes/valorMesTotal;
+        marcaMap[m].ovos+=Math.round(ovosNoMes*prop);
+        marcaMap[m].diasProd+=Math.round(diasNoMes*prop);
+      }
+    });
+    // eficiência: ovos / (galinhas ativas * dias com registro)
+    var diasM=marcaMap[m].diasProd||1;
+    marcaMap[m].eficiencia=ativas>0?marcaMap[m].ovos/(ativas*diasM):0;
+  });
+
+  var mc2=document.getElementById('marcaCard');
+  var ml=document.getElementById('marcaList');ml.innerHTML='';
+  if(marcaKeys.length>0){
+    mc2.style.display='block';
+    var totalValMarca=marcaKeys.reduce(function(s,k){return s+marcaMap[k].valor;},0)||1;
+    var totalOvosMarca=marcaKeys.reduce(function(s,k){return s+marcaMap[k].ovos;},0)||1;
+    // eficiência máxima entre as marcas (para barra relativa)
+    var maxEfic=marcaKeys.reduce(function(s,k){return Math.max(s,marcaMap[k].eficiencia);},0)||1;
+    marcaKeys.sort(function(a,b){return marcaMap[b].eficiencia-marcaMap[a].eficiencia;}).forEach(function(m){
+      var d=marcaMap[m];
+      var pctVal=Math.round(d.valor/totalValMarca*100);
+      var pctOvos=Math.round(d.ovos/totalOvosMarca*100);
+      var pctEfic=Math.round(d.eficiencia/maxEfic*100);
+      var eficPct=Math.min(100,Math.round(d.eficiencia*100));
+      var eficCor=eficPct>=75?'var(--green-deep)':eficPct>=50?'var(--gold-deep)':'var(--red)';
+      var row=document.createElement('div');row.className='marca-row';
+      row.style.cssText='flex-direction:column;align-items:stretch;gap:6px;';
+      // título
+      var top=document.createElement('div');top.style.cssText='display:flex;justify-content:space-between;align-items:baseline;';
+      top.innerHTML='<div class="marca-name">'+m+'</div>'+
+        '<div style="font-size:11px;color:var(--ink-faint)">'+d.compras+' compra'+(d.compras>1?'s':'')+(d.kg>0?' · '+fmtN(d.kg,1)+' kg':'')+'</div>';
+      row.appendChild(top);
+      // eficiência (destaque principal)
+      var eRow=document.createElement('div');eRow.style.cssText='display:flex;align-items:center;gap:8px;';
+      eRow.innerHTML='<span style="font-size:11px;color:var(--ink-soft);min-width:44px">📊 Efic.</span>'+
+        '<div class="marca-bar-wrap" style="flex:1"><div class="marca-bar-fill" style="width:'+pctEfic+'%;background:'+eficCor+'"></div></div>'+
+        '<span style="font-size:13px;font-weight:800;color:'+eficCor+';min-width:54px;text-align:right">'+eficPct+'%</span>';
+      row.appendChild(eRow);
+      // subtítulo eficiência
+      var eSub=document.createElement('div');eSub.style.cssText='font-size:10.5px;color:var(--ink-faint);margin-top:-2px;padding-left:52px;';
+      eSub.textContent=fmtN(d.ovos)+' ovos · '+ativas+' ativa'+(ativas!==1?'s':'')+' · '+d.diasProd+' dia'+(d.diasProd!==1?'s':'');
+      row.appendChild(eSub);
+      // linha ovos
+      var oRow=document.createElement('div');oRow.style.cssText='display:flex;align-items:center;gap:8px;';
+      oRow.innerHTML='<span style="font-size:11px;color:var(--ink-soft);min-width:44px">🥚 Ovos</span>'+
+        '<div class="marca-bar-wrap" style="flex:1"><div class="marca-bar-fill" style="width:'+pctOvos+'%;background:var(--gold-deep)"></div></div>'+
+        '<span style="font-size:13px;font-weight:700;color:var(--gold-deep);min-width:54px;text-align:right">'+fmtN(d.ovos)+'</span>';
+      row.appendChild(oRow);
+      // linha valor
+      var vRow=document.createElement('div');vRow.style.cssText='display:flex;align-items:center;gap:8px;';
+      vRow.innerHTML='<span style="font-size:11px;color:var(--ink-soft);min-width:44px">💰 Gasto</span>'+
+        '<div class="marca-bar-wrap" style="flex:1"><div class="marca-bar-fill" style="width:'+pctVal+'%"></div></div>'+
+        '<span style="font-size:13px;font-weight:700;color:var(--green-deep);min-width:54px;text-align:right">'+fmtBRL(d.valor)+'</span>';
+      row.appendChild(vRow);
+      ml.appendChild(row);
+    });
+  }else{mc2.style.display='none';}
+
+  // ATÍPICOS PAINEL
+  var atipMes=forPeriod(atipicosE,period);
+  var atipCard=document.getElementById('atipPainelCard');
+  var atipPainelList=document.getElementById('atipPainelList');
+  atipPainelList.innerHTML='';
+  if(atipMes.length>0){
+    atipCard.style.display='block';
+    var totalAtip=atipMes.reduce(function(s,e){return s+(Number(e.quantidade)||1);},0);
+
+    // maior ovo de TODOS os tempos (não só do mês)
+    var recordGeral=atipicosE.reduce(function(rec,e){
+      return (Number(e.peso)||0)>(Number(rec.peso)||0)?e:rec;
+    },atipicosE[0]);
+
+    // maior ovo do período atual
+    var recordMes=atipMes.reduce(function(rec,e){
+      return (Number(e.peso)||0)>(Number(rec.peso)||0)?e:rec;
+    },atipMes[0]);
+
+    // cabeçalho: total do período
+    var sumP=document.createElement('div');sumP.style.cssText='display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;';
+    sumP.innerHTML='<span style="font-size:13px;font-weight:700;color:var(--orange)">'+totalAtip+' ovo'+(totalAtip>1?'s atípicos':' atípico')+' no período</span>';
+    atipPainelList.appendChild(sumP);
+
+    // card do recorde geral
+    var recDiv=document.createElement('div');
+    recDiv.style.cssText='background:var(--orange-soft);border:1.5px solid var(--orange);border-radius:10px;padding:8px 11px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;';
+    var isMesRecord=recordGeral.id===recordMes.id;
+    recDiv.innerHTML=
+      '<div>'+
+        '<div style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--orange);font-weight:700;margin-bottom:2px">🏆 Maior ovo já registrado</div>'+
+        '<div style="font-size:22px;font-weight:800;color:var(--orange);line-height:1">'+recordGeral.peso+'g</div>'+
+        (recordGeral.obs?'<div style="font-size:10.5px;color:var(--ink-soft);margin-top:1px">'+recordGeral.obs+'</div>':'')+
+      '</div>'+
+      '<div style="text-align:right">'+
+        '<div style="font-size:13px;font-weight:700;color:var(--ink)">'+fmtBR(recordGeral.data)+'</div>'+
+        (isMesRecord?'<div style="font-size:10px;color:var(--green-deep);font-weight:600;margin-top:2px">✅ também o maior do período</div>':
+          '<div style="font-size:10px;color:var(--ink-faint);margin-top:2px">Maior do período: '+recordMes.peso+'g ('+fmtBR(recordMes.data)+')</div>')+
+      '</div>';
+    atipPainelList.appendChild(recDiv);
+
+    // lista dos do período
+    [].concat(atipMes).sort(function(a,b){return b.data.localeCompare(a.data);}).slice(0,3).forEach(function(e){
+      var row=document.createElement('div');row.className='atip-item';
+      row.innerHTML=fmtBR(e.data)+' — <b>'+e.peso+'g</b>'+(e.quantidade>1?' ×'+e.quantidade:'')+(e.obs?' <span>'+e.obs+'</span>':'');
+      atipPainelList.appendChild(row);
+    });
+    if(atipMes.length>3){
+      var more=document.createElement('div');more.style.cssText='font-size:11px;color:var(--orange);margin-top:4px;cursor:pointer;';
+      more.textContent='+ '+(atipMes.length-3)+' mais → ver todos';
+      more.addEventListener('click',function(){goTab('atipicos');});
+      atipPainelList.appendChild(more);
+    }
+  }else{atipCard.style.display='none';}
 }
 
 function renderChart(mode){
@@ -1033,6 +1492,9 @@ function renderOvosList(){
 }
 
 /* ======= RAÇÃO TAB ======= */
+document.getElementById('racaoMarca').addEventListener('change',function(){
+  document.getElementById('racaoMarcaOutraWrap').style.display=this.value==='Outra'?'block':'none';
+});
 document.getElementById('racaoKg').addEventListener('input',updateRacaoHint);
 document.getElementById('racaoValor').addEventListener('input',updateRacaoHint);
 function updateRacaoHint(){
@@ -1048,12 +1510,18 @@ document.getElementById('btnSalvarRacao').addEventListener('click',async functio
   var valor=Number(document.getElementById('racaoValor').value);
   var dur=document.getElementById('racaoDur').value;
   var duracaoDias=dur===''?null:Number(dur);
+  var marcaSel=document.getElementById('racaoMarca').value;
+  var marcaOutra=document.getElementById('racaoMarcaOutra').value.trim();
+  var marca=marcaSel==='Outra'?(marcaOutra||'Outra'):marcaSel;
   if(!valor){toast('Informe o valor pago');return;}
-  racaoE.push({id:uid(),data:data,kg:kg,valor:valor,duracaoDias:duracaoDias});
+  racaoE.push({id:uid(),data:data,kg:kg,valor:valor,duracaoDias:duracaoDias,marca:marca});
   await saveRacao();
   document.getElementById('racaoKg').value='';
   document.getElementById('racaoValor').value='';
   document.getElementById('racaoDur').value='';
+  document.getElementById('racaoMarca').value='';
+  document.getElementById('racaoMarcaOutra').value='';
+  document.getElementById('racaoMarcaOutraWrap').style.display='none';
   updateRacaoHint();renderRacaoList();toast('Compra registrada');
 });
 
@@ -1069,6 +1537,7 @@ function renderRacaoList(){
   [].concat(racaoE).sort(function(a,b){return b.data.localeCompare(a.data);}).forEach(function(e){
     var pkkg=e.kg>0?e.valor/e.kg:0;
     var pts=[];
+    if(e.marca) pts.push('🏷 '+e.marca);
     if(e.kg>0) pts.push(fmtN(e.kg,1)+' kg · '+fmtBRL(pkkg)+'/kg');
     if(e.duracaoDias) pts.push('durou '+e.duracaoDias+' dias');
     var row=document.createElement('div');row.className='entry';
@@ -1077,6 +1546,104 @@ function renderRacaoList(){
   });
   wrap.querySelectorAll('.del').forEach(function(btn){
     confirmDel(btn,function(id){racaoE=racaoE.filter(function(x){return x.id!==id;});saveRacao();renderRacaoList();toast('Removido');});
+  });
+  renderComparativoMarcas();
+  renderMilhoList();
+}
+
+/* ---- COMPARATIVO POR MARCA/MÊS ---- */
+function renderComparativoMarcas(){
+  var wrap=document.getElementById('compMarcaList');wrap.innerHTML='';
+  if(!racaoE.length){wrap.innerHTML='<div class="empty">Registre compras de ração com marca para ver o comparativo.</div>';return;}
+  // agrupar por mês
+  var mesesMap={};
+  racaoE.forEach(function(e){
+    var ym=e.data?e.data.slice(0,7):null;
+    if(!ym) return;
+    if(!mesesMap[ym]) mesesMap[ym]={marcas:{}};
+    var m=e.marca||'Sem marca';
+    if(!mesesMap[ym].marcas[m]) mesesMap[ym].marcas[m]={kg:0,valor:0};
+    mesesMap[ym].marcas[m].kg+=(Number(e.kg)||0);
+    mesesMap[ym].marcas[m].valor+=(Number(e.valor)||0);
+  });
+  // ovos por mês
+  var ovosPorMes={};
+  ovosE.forEach(function(e){
+    var ym=e.data?e.data.slice(0,7):null;
+    if(ym) ovosPorMes[ym]=(ovosPorMes[ym]||0)+totalOvo(e);
+  });
+  // milho por mês
+  var milhoPorMes={};
+  milhoE.forEach(function(e){
+    var ym=e.data?e.data.slice(0,7):null;
+    if(ym) milhoPorMes[ym]=(milhoPorMes[ym]||0)+(Number(e.kg)||0);
+  });
+  var mesesKeys=Object.keys(mesesMap).sort().reverse();
+  mesesKeys.forEach(function(ym){
+    var d=mesesMap[ym];
+    var totalValMes=Object.values(d.marcas).reduce(function(s,v){return s+v.valor;},0)||1;
+    var ovMes=ovosPorMes[ym]||0;
+    var milhoMes=milhoPorMes[ym]||0;
+    // label mês
+    var parts=ym.split('-');
+    var mLabel=new Date(Number(parts[0]),Number(parts[1])-1,1).toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
+    var mesDiv=document.createElement('div');mesDiv.className='comp-mes-row';
+    var header='<div class="comp-mes-label">'+mLabel+(ovMes>0?' · 🥚 '+fmtN(ovMes)+' ovos':'')+(milhoMes>0?' · 🌽 '+fmtN(milhoMes,1)+'kg milho':'')+'</div>';
+    var linhas='';
+    var marcasSorted=Object.keys(d.marcas).sort(function(a,b){return d.marcas[b].valor-d.marcas[a].valor;});
+    var maxVal=d.marcas[marcasSorted[0]].valor||1;
+    marcasSorted.forEach(function(m){
+      var mv=d.marcas[m];
+      var pct=Math.round(mv.valor/totalValMes*100);
+      var barW=Math.round(mv.valor/maxVal*100);
+      var eficStr='';
+      if(ovMes>0&&marcasSorted.length===1){
+        // única marca no mês — toda produção é dela
+        var ativas2=galinhasAtivas();
+        var diasMes=ovosE.filter(function(e){return e.data&&e.data.slice(0,7)===ym;}).length||1;
+        var efic=ativas2>0?Math.min(100,Math.round(ovMes/(diasMes*ativas2)*100)):0;
+        eficStr=' <span style="color:var(--green-deep);font-weight:700">'+efic+'% efic.</span>';
+      }
+      linhas+='<div class="comp-marca-line">'+
+        '<span class="comp-marca-name">'+m+'</span>'+
+        '<div class="comp-bar-mini"><div class="comp-bar-mini-fill" style="width:'+barW+'%;background:var(--green-deep)"></div></div>'+
+        '<span class="comp-nums">'+fmtBRL(mv.valor)+' ('+pct+'%)'+(mv.kg>0?' · '+fmtN(mv.kg,1)+'kg':'')+eficStr+'</span>'+
+        '</div>';
+    });
+    mesDiv.innerHTML=header+linhas;
+    wrap.appendChild(mesDiv);
+  });
+}
+
+/* ---- MILHO ---- */
+document.getElementById('btnSalvarMilho').addEventListener('click',async function(){
+  var data=document.getElementById('milhoData').value||todayStr();
+  var kg=Number(document.getElementById('milhoKg').value)||0;
+  var valor=Number(document.getElementById('milhoValor').value)||0;
+  var obs=document.getElementById('milhoObs').value.trim();
+  if(!kg&&!valor){toast('Informe kg ou valor');return;}
+  milhoE.push({id:uid(),data:data,kg:kg,valor:valor,obs:obs});
+  await saveMilho();
+  document.getElementById('milhoKg').value='';
+  document.getElementById('milhoValor').value='';
+  document.getElementById('milhoObs').value='';
+  renderMilhoList();toast('🌽 Milho registrado');
+});
+
+function renderMilhoList(){
+  var ym=curYM();
+  var mes=milhoE.filter(function(e){return e.data.slice(0,7)===ym;}).reduce(function(s,e){return s+(Number(e.valor)||0);},0);
+  document.getElementById('milhoTotal').textContent=fmtBRL(mes)+' no mês';
+  var wrap=document.getElementById('milhoList');wrap.innerHTML='';
+  if(!milhoE.length){wrap.innerHTML='<div class="empty">Nenhum registro de milho ainda.</div>';return;}
+  [].concat(milhoE).sort(function(a,b){return b.data.localeCompare(a.data);}).forEach(function(e){
+    var row=document.createElement('div');row.className='entry';
+    var sub=(e.kg>0?fmtN(e.kg,1)+' kg':'')+(e.kg>0&&e.valor>0?' · ':'')+(e.valor>0?fmtBRL(e.valor/e.kg)+'/kg':'')+(e.obs?' · '+e.obs:'');
+    row.innerHTML='<div><div class="e-date">'+fmtBR(e.data)+'</div><div class="e-main">'+(e.valor>0?fmtBRL(e.valor):'🌽 '+fmtN(e.kg,1)+' kg')+'</div><div class="e-sub">'+sub+'</div></div><button class="del" data-id="'+e.id+'">✕</button>';
+    wrap.appendChild(row);
+  });
+  wrap.querySelectorAll('.del').forEach(function(btn){
+    confirmDel(btn,function(id){milhoE=milhoE.filter(function(x){return x.id!==id;});saveMilho();renderMilhoList();toast('Removido');});
   });
 }
 
@@ -1159,6 +1726,215 @@ function renderOutrosList(){
   });
 }
 
+/* ======= ATÍPICOS TAB ======= */
+document.getElementById('atipPeso').addEventListener('input',function(){
+  var p=Number(this.value)||0;
+  var el=document.getElementById('atipHint');
+  if(p>0) el.textContent=p<60?'⚠️ Peso abaixo do normal (< 60g)':p>80?'📏 Ovo grande: '+p+'g':p+' g — padrão';
+  else el.innerHTML='&nbsp;';
+});
+
+document.getElementById('btnSalvarAtip').addEventListener('click',async function(){
+  var data=document.getElementById('atipData').value||todayStr();
+  var peso=Number(document.getElementById('atipPeso').value)||0;
+  var qtd=Number(document.getElementById('atipQtd').value)||1;
+  var obs=document.getElementById('atipObs').value.trim();
+  if(!peso){toast('Informe o peso do ovo');return;}
+  atipicosE.push({id:uid(),data:data,peso:peso,quantidade:qtd,obs:obs});
+  await saveAtipicos();
+  document.getElementById('atipPeso').value='';
+  document.getElementById('atipQtd').value='1';
+  document.getElementById('atipObs').value='';
+  document.getElementById('atipHint').innerHTML='&nbsp;';
+  renderAtipList();toast('Ovo atípico registrado: '+peso+'g');
+});
+
+function renderAtipList(){
+  var ym=curYM();
+  var mes=atipicosE.filter(function(e){return e.data.slice(0,7)===ym;});
+  var totalMes=mes.reduce(function(s,e){return s+(Number(e.quantidade)||1);},0);
+  document.getElementById('atipTotal').textContent=totalMes+' no mês';
+  var wrap=document.getElementById('atipList');wrap.innerHTML='';
+  if(!atipicosE.length){wrap.innerHTML='<div class="empty">Nenhum ovo atípico registrado ainda.</div>';return;}
+  [].concat(atipicosE).sort(function(a,b){return b.data.localeCompare(a.data);}).forEach(function(e){
+    var row=document.createElement('div');row.className='entry';
+    var pesoClass=e.peso>=100?'style="color:var(--orange);font-weight:800"':'style="color:var(--ink)"';
+    row.innerHTML='<div><div class="e-date">'+fmtBR(e.data)+'</div>'+
+      '<div class="e-main" '+pesoClass+'>'+e.peso+' g'+(e.quantidade>1?' × '+e.quantidade+' ovos':'')+'</div>'+
+      (e.obs?'<div class="e-obs">📝 '+e.obs+'</div>':'')+'</div>'+
+      '<button class="del" data-id="'+e.id+'">✕</button>';
+    wrap.appendChild(row);
+  });
+  wrap.querySelectorAll('.del').forEach(function(btn){
+    confirmDel(btn,function(id){atipicosE=atipicosE.filter(function(x){return x.id!==id;});saveAtipicos();renderAtipList();toast('Removido');});
+  });
+}
+
+/* ======= PINTAINHAS TAB ======= */
+var FASES=[
+  {id:'incubacao',nome:'Incubação',sem:[0,3],cor:'var(--purple)'},
+  {id:'pintinho', nome:'Pintinho',  sem:[3,8], cor:'#E8A000'},
+  {id:'frango',   nome:'Frango/Recria',sem:[8,18],cor:'var(--green-deep)'},
+  {id:'postura',  nome:'Postura',   sem:[18,100],cor:'var(--gold-deep)'}
+];
+
+function faseAtual(semanas){
+  for(var i=0;i<FASES.length;i++){
+    if(semanas>=FASES[i].sem[0]&&semanas<FASES[i].sem[1]) return FASES[i];
+  }
+  return FASES[FASES.length-1];
+}
+
+function atualizaSelectLotes(){
+  var sel=document.getElementById('pintEvtLote');
+  var val=sel.value;
+  sel.innerHTML='<option value="">— Selecione —</option>';
+  lotesE.filter(function(l){return l.ativo!==false;}).forEach(function(l){
+    var opt=document.createElement('option');
+    opt.value=l.id;opt.textContent=l.nome;
+    sel.appendChild(opt);
+  });
+  sel.value=val;
+}
+
+document.getElementById('btnSalvarLote').addEventListener('click',async function(){
+  var nome=document.getElementById('pintNome').value.trim();
+  var qtd=Number(document.getElementById('pintQtd').value)||0;
+  var dataInc=document.getElementById('pintDataInc').value||todayStr();
+  var raca=document.getElementById('pintRaca').value.trim();
+  if(!nome||!qtd){toast('Informe nome e quantidade de ovos');return;}
+  var lote={id:uid(),nome:nome,qtdOvos:qtd,qtdAves:0,dataInc:dataInc,raca:raca,ativo:true,eventos:[]};
+  lotesE.push(lote);
+  await saveLotes();
+  document.getElementById('pintNome').value='';
+  document.getElementById('pintQtd').value='';
+  document.getElementById('pintRaca').value='';
+  atualizaSelectLotes();
+  renderPintainhas();
+  toast('Lote "'+nome+'" criado!');
+});
+
+document.getElementById('btnSalvarEvt').addEventListener('click',async function(){
+  var loteId=document.getElementById('pintEvtLote').value;
+  var tipo=document.getElementById('pintEvtTipo').value;
+  var data=document.getElementById('pintEvtData').value||todayStr();
+  var qtd=Number(document.getElementById('pintEvtQtd').value)||null;
+  var obs=document.getElementById('pintEvtObs').value.trim();
+  if(!loteId){toast('Selecione um lote');return;}
+  var lote=lotesE.find(function(l){return l.id===loteId;});
+  if(!lote) return;
+  var evt={id:uid(),tipo:tipo,data:data,qtd:qtd,obs:obs};
+  lote.eventos=lote.eventos||[];
+  lote.eventos.push(evt);
+  // atualiza contagem de aves vivas
+  if(tipo==='nascimento') lote.qtdAves=(lote.qtdAves||0)+(qtd||1);
+  if(tipo==='morte') lote.qtdAves=Math.max(0,(lote.qtdAves||0)-(qtd||1));
+  await saveLotes();
+  document.getElementById('pintEvtQtd').value='';
+  document.getElementById('pintEvtObs').value='';
+  renderPintainhas();
+  var nomes={vermifugo:'💊 Vermifugação',vitamina:'🧪 Vitamina',racao:'🌾 Troca ração',morte:'💀 Baixa',nascimento:'🐣 Nascimento',outro:'📝 Evento'};
+  toast((nomes[tipo]||tipo)+' registrado no lote "'+lote.nome+'"');
+});
+
+function renderPintainhas(){
+  atualizaSelectLotes();
+  var wrap=document.getElementById('pintLotesList');wrap.innerHTML='';
+  var lotesAtivos=lotesE.filter(function(l){return l.ativo!==false;});
+  var summary=document.getElementById('pintSummary');
+  if(!lotesAtivos.length){
+    wrap.innerHTML='<div class="empty">Nenhum lote cadastrado ainda.</div>';
+    summary.style.display='none';
+    return;
+  }
+  var totalAves=lotesAtivos.reduce(function(s,l){return s+(l.qtdAves||0);},0);
+  var totalPostura=lotesAtivos.filter(function(l){
+    var sem=Math.floor((new Date()-new Date(l.dataInc+'T12:00:00'))/(7*86400000));
+    return sem>=18;
+  }).reduce(function(s,l){return s+(l.qtdAves||0);},0);
+  summary.style.display='flex';
+  document.getElementById('pintTotalLotes').textContent=lotesAtivos.length;
+  document.getElementById('pintTotalAves').textContent=totalAves;
+  document.getElementById('pintTotalPostura').textContent=totalPostura;
+
+  [].concat(lotesAtivos).sort(function(a,b){return b.dataInc.localeCompare(a.dataInc);}).forEach(function(lote){
+    var semanas=Math.floor((new Date()-new Date(lote.dataInc+'T12:00:00'))/(7*86400000));
+    var dias=Math.floor((new Date()-new Date(lote.dataInc+'T12:00:00'))/86400000);
+    var fase=faseAtual(semanas);
+    var pctCiclo=Math.min(100,Math.round(semanas/18*100)); // 18 sem = início postura
+    var proxFase=FASES.find(function(f){return f.sem[0]>semanas;});
+    var semParaProx=proxFase?proxFase.sem[0]-semanas:0;
+
+    var card=document.createElement('div');card.className='pint-lote';
+    var evts=lote.eventos||[];
+    var ultimosEvts=[].concat(evts).sort(function(a,b){return b.data.localeCompare(a.data);}).slice(0,4);
+
+    var evtHTML=ultimosEvts.map(function(e){
+      var dot={vermifugo:'verm',vitamina:'vit',racao:'rac',morte:'verm',nascimento:'rac',outro:'vit'}[e.tipo]||'vit';
+      var icone={vermifugo:'💊',vitamina:'🧪',racao:'🌾',morte:'💀',nascimento:'🐣',outro:'📝'}[e.tipo]||'📝';
+      return '<div class="pint-evento" style="justify-content:space-between">'+
+        '<div style="display:flex;align-items:center;gap:6px">'+
+          '<div class="pint-evento-dot '+dot+'"></div>'+
+          icone+' '+fmtBR(e.data)+(e.obs?' — '+e.obs:'')+(e.qtd?' ('+e.qtd+' av)':'')+
+        '</div>'+
+        '<button class="del" style="width:24px;height:24px;font-size:11px;flex-shrink:0" data-evt-id="'+e.id+'" data-lote-ref="'+lote.id+'">✕</button>'+
+      '</div>';
+    }).join('');
+
+    card.innerHTML=
+      '<div class="pint-lote-header">'+
+        '<div>'+
+          '<div class="pint-lote-nome">'+lote.nome+(lote.raca?' <span style="font-size:11px;font-weight:400;color:var(--ink-faint)">'+lote.raca+'</span>':'')+'</div>'+
+          '<div class="pint-lote-semana">Semana '+Math.max(0,semanas)+' · '+dias+' dias · '+lote.qtdOvos+' ovos incubados</div>'+
+        '</div>'+
+        '<button class="del" data-lote-id="'+lote.id+'" title="Encerrar lote">✕</button>'+
+      '</div>'+
+      '<span class="pint-fase '+fase.id+'">'+fase.nome+'</span>'+
+      (lote.qtdAves>0?'<span style="font-size:11px;color:var(--ink-soft);margin-left:6px">'+lote.qtdAves+' ave'+(lote.qtdAves!==1?'s':'')+' vivas</span>':'')+
+      '<div class="pint-bar-wrap" style="margin-top:6px"><div class="pint-bar-fill" style="width:'+pctCiclo+'%;background:'+fase.cor+'"></div></div>'+
+      '<div style="display:flex;justify-content:space-between;font-size:10px;color:var(--ink-faint);margin-bottom:6px">'+
+        '<span>Incubação '+lote.dataInc.split('-').reverse().join('/')+'</span>'+
+        (semanas<18?'<span>Postura em ~'+semParaProx+' sem.</span>':'<span style="color:var(--gold-deep);font-weight:700">✅ Em postura</span>')+
+      '</div>'+
+      (evtHTML?'<div class="pint-eventos">'+evtHTML+'</div>':'')+
+      (evts.length>4?'<div style="font-size:10.5px;color:var(--ink-faint);margin-top:4px">+ '+(evts.length-4)+' eventos anteriores</div>':'');
+
+    wrap.appendChild(card);
+  });
+
+  // botões de encerrar lote
+  wrap.querySelectorAll('[data-lote-id]').forEach(function(btn){
+    confirmDel(btn,async function(lid){
+      var l=lotesE.find(function(x){return x.id===lid;});
+      if(l){l.ativo=false;}
+      await saveLotes();
+      renderPintainhas();
+      toast('Lote encerrado');
+    });
+    btn.dataset.id=btn.dataset.loteId;
+  });
+
+  // botões de apagar evento individual
+  wrap.querySelectorAll('[data-evt-id]').forEach(function(btn){
+    confirmDel(btn,async function(evtId){
+      var loteRef=btn.dataset.loteRef;
+      var lote=lotesE.find(function(x){return x.id===loteRef;});
+      if(!lote) return;
+      // desfaz efeito do evento nas aves antes de remover
+      var evt=lote.eventos.find(function(e){return e.id===evtId;});
+      if(evt){
+        if(evt.tipo==='nascimento') lote.qtdAves=Math.max(0,(lote.qtdAves||0)-(evt.qtd||1));
+        if(evt.tipo==='morte') lote.qtdAves=(lote.qtdAves||0)+(evt.qtd||1);
+        lote.eventos=lote.eventos.filter(function(e){return e.id!==evtId;});
+      }
+      await saveLotes();
+      renderPintainhas();
+      toast('Evento removido');
+    });
+    btn.dataset.id=btn.dataset.evtId;
+  });
+}
+
 /* ======= INATIVAS TAB ======= */
 var CATS=[
   {id:'choca',  emoji:'🐣', nome:'Choca'},
@@ -1208,6 +1984,7 @@ function renderAjustes(){
   document.getElementById('cfgBandeja').value=cfg.precoBandeja;
   document.getElementById('cfgOvBandeja').value=cfg.ovosPorBandeja;
   document.getElementById('cfgRacaoRef').value=cfg.precoRacaoRef;
+  document.getElementById('cfgDataNasc').value=cfg.dataNascPlantel||'';
   document.getElementById('cfgMetaOvos').value=cfg.metaOvos||'';
   document.getElementById('cfgMetaRec').value=cfg.metaReceita||'';
   document.getElementById('cfgAlerte').value=cfg.alerteMin||'';
@@ -1216,6 +1993,14 @@ function renderAjustes(){
   renderMortList();
 }
 
+document.getElementById('btnCfgGeral').addEventListener('click',async function(){
+  cfg.precoBandeja=Number(document.getElementById('cfgBandeja').value)||0;
+  cfg.ovosPorBandeja=Number(document.getElementById('cfgOvBandeja').value)||30;
+  cfg.precoRacaoRef=Number(document.getElementById('cfgRacaoRef').value)||0;
+  cfg.dataNascPlantel=document.getElementById('cfgDataNasc').value||'';
+  await saveCfg();toast('Configurações salvas');
+});
+
 document.getElementById('galMinus').addEventListener('click',async function(){
   cfg.numGalinhas=Math.max(0,cfg.numGalinhas-1);
   document.getElementById('galVal').textContent=cfg.numGalinhas;await saveCfg();
@@ -1223,15 +2008,6 @@ document.getElementById('galMinus').addEventListener('click',async function(){
 document.getElementById('galPlus').addEventListener('click',async function(){
   cfg.numGalinhas++;
   document.getElementById('galVal').textContent=cfg.numGalinhas;await saveCfg();
-});
-
-['cfgBandeja','cfgOvBandeja','cfgRacaoRef'].forEach(function(id){
-  document.getElementById(id).addEventListener('change',async function(){
-    cfg.precoBandeja=Number(document.getElementById('cfgBandeja').value)||0;
-    cfg.ovosPorBandeja=Number(document.getElementById('cfgOvBandeja').value)||30;
-    cfg.precoRacaoRef=Number(document.getElementById('cfgRacaoRef').value)||0;
-    await saveCfg();toast('Configurações salvas');
-  });
 });
 
 document.getElementById('btnMetas').addEventListener('click',async function(){
@@ -1265,15 +2041,29 @@ function renderMortList(){
   if(!mortE.length){
     wrap.innerHTML='<p style="font-size:12px;color:var(--ink-faint);margin:0">Nenhuma baixa registrada.</p>';return;
   }
-  [].concat(mortE).sort(function(a,b){return b.data.localeCompare(a.data);}).slice(0,5).forEach(function(e){
+  [].concat(mortE).sort(function(a,b){return b.data.localeCompare(a.data);}).forEach(function(e){
     var row=document.createElement('div');row.className='mort-row';
-    row.innerHTML='<div><div class="mort-info">−'+e.quantidade+' galinha'+(e.quantidade>1?'s':'')+(e.causa?' · '+e.causa:'')+'</div><div class="mort-date">'+fmtBR(e.data)+'</div></div>';
+    row.innerHTML=
+      '<div><div class="mort-info">−'+e.quantidade+' galinha'+(e.quantidade>1?'s':'')+(e.causa?' · '+e.causa:'')+'</div>'+
+      '<div class="mort-date">'+fmtBR(e.data)+'</div></div>'+
+      '<button class="del" data-id="'+e.id+'" style="width:28px;height:28px;font-size:12px">✕</button>';
     wrap.appendChild(row);
   });
-  if(mortE.length>5){
-    var p=document.createElement('p');p.style.cssText='font-size:11px;color:var(--ink-faint);text-align:center;margin:6px 0 0';
-    p.textContent='+ '+(mortE.length-5)+' registros anteriores';wrap.appendChild(p);
-  }
+  wrap.querySelectorAll('.del').forEach(function(btn){
+    confirmDel(btn,async function(id){
+      var evt=mortE.find(function(x){return x.id===id;});
+      if(evt){
+        // devolve as galinhas ao plantel
+        cfg.numGalinhas+=Number(evt.quantidade)||1;
+        document.getElementById('galVal').textContent=cfg.numGalinhas;
+        await saveCfg();
+      }
+      mortE=mortE.filter(function(x){return x.id!==id;});
+      await saveMort();
+      renderMortList();
+      toast('Baixa removida — plantel restaurado');
+    });
+  });
 }
 
 /* lembrete */
@@ -1337,6 +2127,21 @@ document.getElementById('btnExportar').addEventListener('click',function(){
   L.push('','=== OUTROS CUSTOS ===','Data;Descrição;Valor (R$)');
   [].concat(outrosE).sort(function(a,b){return a.data.localeCompare(b.data);}).forEach(function(e){
     L.push([fmtBR(e.data),e.descricao||'',(Number(e.valor)||0).toFixed(2)].join(';'));
+  });
+  L.push('','=== OVOS ATÍPICOS ===','Data;Peso (g);Quantidade;Observação');
+  [].concat(atipicosE).sort(function(a,b){return a.data.localeCompare(b.data);}).forEach(function(e){
+    L.push([fmtBR(e.data),Number(e.peso)||0,Number(e.quantidade)||1,e.obs||''].join(';'));
+  });
+  L.push('','=== MILHO ===','Data;Kg;Valor (R$);Observação');
+  [].concat(milhoE).sort(function(a,b){return a.data.localeCompare(b.data);}).forEach(function(e){
+    L.push([fmtBR(e.data),Number(e.kg)||0,(Number(e.valor)||0).toFixed(2),e.obs||''].join(';'));
+  });
+  L.push('','=== PINTAINHAS / LOTES ===','Lote;Raça;Ovos Incubados;Aves Vivas;Data Incubação');
+  lotesE.forEach(function(l){
+    L.push([l.nome,l.raca||'',l.qtdOvos,l.qtdAves||0,l.dataInc?l.dataInc.split('-').reverse().join('/'):''].join(';'));
+    (l.eventos||[]).forEach(function(e){
+      L.push(['  └ '+l.nome,e.tipo,e.data?e.data.split('-').reverse().join('/'):'',e.qtd||'',e.obs||''].join(';'));
+    });
   });
   L.push('','=== MORTALIDADE ===','Data;Quantidade;Causa');
   [].concat(mortE).sort(function(a,b){return a.data.localeCompare(b.data);}).forEach(function(e){
@@ -1527,9 +2332,9 @@ document.getElementById('btnExportarPDF').addEventListener('click',function(){
 
 /* reset */
 confirmDel(document.getElementById('btnReset'),async function(){
-  ovosE=[];racaoE=[];outrosE=[];vendasE=[];mortE=[];
-  await saveOvos();await saveRacao();await saveOutros();await saveVendas();await saveMort();
-  renderOvosList();renderRacaoList();renderVendasList();renderOutrosList();renderAjustes();
+  ovosE=[];racaoE=[];outrosE=[];vendasE=[];mortE=[];atipicosE=[];milhoE=[];lotesE=[];
+  await saveOvos();await saveRacao();await saveOutros();await saveVendas();await saveMort();await saveAtipicos();await saveMilho();await saveLotes();
+  renderOvosList();renderRacaoList();renderVendasList();renderOutrosList();renderAtipList();renderMilhoList();renderAjustes();
   toast('Todos os dados apagados');
 });
 document.getElementById('btnReset').dataset.id='reset';
@@ -1537,7 +2342,7 @@ document.getElementById('btnReset').dataset.id='reset';
 /* ======= INIT ======= */
 (async function init(){
   var td=todayStr();
-  ['ovoData','racaoData','vendaData','outroData','mortData'].forEach(function(id){
+  ['ovoData','racaoData','vendaData','outroData','mortData','atipData','milhoData','pintDataInc','pintEvtData'].forEach(function(id){
     document.getElementById(id).value=td;
   });
   await loadAll();
@@ -1554,6 +2359,9 @@ document.getElementById('btnReset').dataset.id='reset';
   renderRacaoList();
   renderVendasList();
   renderOutrosList();
+  renderAtipList();
+  renderMilhoList();
+  atualizaSelectLotes();
   startReminder();
 })();
 
